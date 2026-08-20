@@ -402,7 +402,7 @@ app.post('/api/chat', requireAuth, async (req, res) => {
     for (let turn = 0; turn < 6; turn++) {
       const response = await anthropic.messages.create({
         model: 'claude-opus-5',
-        max_tokens: 50000,
+        max_tokens: 5000,
         system: systemPrompt,
         tools,
         messages,
